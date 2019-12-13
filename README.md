@@ -11,7 +11,7 @@ Raw data -> Object storage -> Database -> Dashboard
 Only verified in:
 
 - ap-northeast-1
-- t3a.nano
+- t3a.micro
 
 # Usage
 
