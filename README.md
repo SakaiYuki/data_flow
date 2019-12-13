@@ -22,7 +22,7 @@ $ export BUCKETNAME=<bucketname>
 $ aws s3 cp Docker.tmpl s3://$BUCKETNAME/
 $ aws cloudformation create-stack \
   --stack-name docker-for-aws \
-  --template-url https://s3-ap-northeast-1.amazonaws.com/$BUCKETNAME/Docker.tmpl \
+  --template-url https://s3-`aws configure get region`.amazonaws.com/$BUCKETNAME/Docker.tmpl \
   --parameters ParameterKey=KeyName,ParameterValue=<AWS::EC2::KeyPair::KeyName> \
   --capabilities CAPABILITY_IAM
 ```
