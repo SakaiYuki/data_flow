@@ -577,10 +577,10 @@
                     "default": "Which SSH key to use?"
                 },
                 "ManagerDiskSize": {
-                    "default": "Manager ephemeral storage volume size?"
+                    "default": "Manager EBS volume size?"
                 },
                 "ManagerDiskType": {
-                    "default": "Manager ephemeral storage volume type"
+                    "default": "Manager EBS volume type"
                 },
                 "ManagerInstanceType": {
                     "default": "Swarm manager instance type?"
@@ -589,10 +589,10 @@
                     "default": "Number of Swarm managers?"
                 },
                 "WorkerDiskSize": {
-                    "default": "Worker ephemeral storage volume size?"
+                    "default": "Worker EBS volume size?"
                 },
                 "WorkerDiskType": {
-                    "default": "Worker ephemeral storage volume type"
+                    "default": "Worker EBS volume type"
                 }
             }
         }
@@ -798,18 +798,20 @@
         },
         "ManagerDiskSize": {
             "Default": "20",
-            "Description": "Size of Manager's ephemeral storage volume in GiB",
+            "Description": "Size of Manager's EBS volume in GiB",
             "MaxValue": "1024",
             "MinValue": "20",
             "Type": "Number"
         },
         "ManagerDiskType": {
             "AllowedValues": [
-                "standard",
-                "gp2"
+                "gp2",
+                "io1",
+                "st1",
+                "sc1"
             ],
-            "Default": "standard",
-            "Description": "Manager ephemeral storage volume type",
+            "Default": "gp2",
+            "Description": "Manager EBS volume type",
             "Type": "String"
         },
         "ManagerInstanceType": {
@@ -888,7 +890,7 @@
         },
         "WorkerDiskSize": {
             "Default": "20",
-            "Description": "Size of Workers's ephemeral storage volume in GiB",
+            "Description": "Size of Workers's EBS volume in GiB",
             "MaxValue": "1024",
             "MinValue": "20",
             "Type": "Number"
@@ -896,10 +898,13 @@
         "WorkerDiskType": {
             "AllowedValues": [
                 "standard",
-                "gp2"
+                "gp2",
+                "io1",
+                "st1",
+                "sc1"
             ],
-            "Default": "standard",
-            "Description": "Worker ephemeral storage volume type",
+            "Default": "gp2",
+            "Description": "Worker EBS volume type",
             "Type": "String"
         }
     },
