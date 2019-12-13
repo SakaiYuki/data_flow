@@ -86,7 +86,7 @@
             ]
         }
     },
-    "Description": "Docker CE for AWS 18.09.2-ce (18.09.2-ce-aws1)",
+    "Description": "Docker CE for AWS 19.03.0-ce (19.03.0-ce-aws1)",
     "Mappings": {
         "AWSInstanceType2Arch": {
             "t3a.micro": {
@@ -106,7 +106,7 @@
         },
         "AWSRegionArch2AMI": {
             "ap-northeast-1": {
-                "HVM64": "ami-08ced28d734f8dbe5",
+                "HVM64": "ami-06aca31c043f599ff",
                 "HVMG2": "NOT_SUPPORTED"
             }
         },
@@ -115,8 +115,8 @@
                 "HasDDC": "no",
                 "addOn": "base",
                 "channel": "stable",
-                "docker": "18.09.2-ce",
-                "forAws": "18.09.2-ce-aws1"
+                "docker": "19.03.0-ce",
+                "forAws": "19.03.0-ce-aws1"
             }
         },
         "VpcCidrs": {
@@ -944,7 +944,7 @@
                 "HealthCheckGracePeriod": 300,
                 "HealthCheckType": "ELB",
                 "LaunchConfigurationName": {
-                    "Ref": "ManagerLaunchConfig18092ceaws1"
+                    "Ref": "ManagerLaunchConfig19030ceaws1"
                 },
                 "LoadBalancerNames": [
                     {
@@ -1058,7 +1058,7 @@
                 }
             }
         },
-        "ManagerLaunchConfig18092ceaws1": {
+        "ManagerLaunchConfig19030ceaws1": {
             "DependsOn": "ExternalLoadBalancer",
             "Properties": {
                 "AssociatePublicIpAddress": "true",
@@ -1526,7 +1526,7 @@
                 "HealthCheckGracePeriod": 300,
                 "HealthCheckType": "ELB",
                 "LaunchConfigurationName": {
-                    "Ref": "NodeLaunchConfig18092ceaws1"
+                    "Ref": "NodeLaunchConfig19030ceaws1"
                 },
                 "LoadBalancerNames": [
                     {
@@ -1640,7 +1640,7 @@
                 }
             }
         },
-        "NodeLaunchConfig18092ceaws1": {
+        "NodeLaunchConfig19030ceaws1": {
             "DependsOn": "ManagerAsg",
             "Properties": {
                 "AssociatePublicIpAddress": "true",
