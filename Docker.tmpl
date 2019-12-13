@@ -280,6 +280,9 @@
             },
             "t2.xlarge": {
                 "Arch": "HVM64"
+            },
+            "t3a.nano": {
+                "Arch": "HVM64"
             }
         },
         "AWSRegion2AZ": {
@@ -726,6 +729,7 @@
         },
         "InstanceType": {
             "AllowedValues": [
+                "t3a.nano",
                 "t2.micro",
                 "t2.small",
                 "t2.medium",
@@ -783,7 +787,7 @@
                 "i3.16xlarge"
             ],
             "ConstraintDescription": "Must be a valid EC2 HVM instance type.",
-            "Default": "t2.micro",
+            "Default": "t3a.nano",
             "Description": "EC2 HVM instance type (t2.micro, m3.medium, etc).",
             "Type": "String"
         },
@@ -810,6 +814,7 @@
         },
         "ManagerInstanceType": {
             "AllowedValues": [
+                "t3a.nano",
                 "t2.micro",
                 "t2.small",
                 "t2.medium",
@@ -867,7 +872,7 @@
                 "i3.16xlarge"
             ],
             "ConstraintDescription": "Must be a valid EC2 HVM instance type.",
-            "Default": "t2.micro",
+            "Default": "t3a.nano",
             "Description": "EC2 HVM instance type (t2.micro, m3.medium, etc).",
             "Type": "String"
         },
