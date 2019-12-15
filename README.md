@@ -1,6 +1,6 @@
-# data_flow
+# Docker for AWS
 
-Raw data -> Object storage -> Database -> Dashboard
+https://docs.docker.com/docker-for-aws/
 
 ## Prerequisite
 
@@ -16,7 +16,7 @@ Only verified in:
 ## Usage
 
 ```
-$ git clone git@github.com:SakaiYuki/data_flow.git
+$ git clone git@github.com:SakaiYuki/docker-for-aws.git
 $ cd data_flow
 $ export BUCKETNAME=<bucketname>
 $ aws s3 cp Docker.tmpl s3://$BUCKETNAME/
