@@ -17,7 +17,7 @@ Only verified in:
 
 ```
 $ git clone git@github.com:SakaiYuki/docker-for-aws.git
-$ cd data_flow
+$ cd docker-for-aws
 $ export BUCKETNAME=<bucketname>
 $ aws s3 cp Docker.tmpl s3://$BUCKETNAME/
 $ aws cloudformation create-stack \
